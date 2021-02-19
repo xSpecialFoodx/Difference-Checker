@@ -336,6 +336,21 @@ def main():
 
 		Headers = []
 								
+		Headers.append("Found differences")
+		Headers.append("Found differences sequences")
+
+		Fields = []
+
+		Fields.append(Headers[0] + ':' + ' ' + str(differences_amount))
+		Fields.append(Headers[1] + ':' + ' ' + str(differences_sequences_amount))
+
+		for Field in Fields:
+			output_file_data_list.append(Field)
+
+		output_file_data_list.append("")
+
+		Headers = []
+								
 		Headers.append("Location")
 		Headers.append("Size")
 		Headers.append("First File Data")
