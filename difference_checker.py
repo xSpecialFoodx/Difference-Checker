@@ -156,8 +156,9 @@ def main():
 		output_file_path = os.path.abspath(args.output).replace('\\','/')
 
 	output_folder_path = os.path.dirname(output_file_path).replace('\\','/')
-
-	distutils.dir_util.mkpath(output_folder_path)
+	
+	if args.dry_run is False:
+		distutils.dir_util.mkpath(output_folder_path)
 	
 	if os.path.exists(output_file_path) and not os.path.isfile(output_file_path):
 		parser.error('invalid output file: {0}'.format(output_file_path))
