@@ -180,7 +180,6 @@ def main():
 
 	AddressesLength = 8#16
 	SizeLength = 8#16
-	DataLength = 8#16
 
 	first_file_data = None
 	first_file_data_size = None
