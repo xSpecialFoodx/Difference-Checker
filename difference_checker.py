@@ -156,6 +156,9 @@ def main():
 		output_file_path = os.path.abspath(args.output).replace('\\','/')
 
 	output_folder_path = os.path.dirname(output_file_path).replace('\\','/')
+
+	if output_folder_path[len(output_folder_path) - 1] == '/':
+		output_folder_path = output_folder_path[:-1]
 	
 	if args.dry_run is False:
 		distutils.dir_util.mkpath(output_folder_path)
