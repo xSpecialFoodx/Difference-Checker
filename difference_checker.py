@@ -92,8 +92,8 @@ Debug = False
 parser = MyParser(description='files difference checker')
 
 if Debug is False:
-	parser.add_argument('--first', required=True, type=str, help='first file')
-	parser.add_argument('--second', required=True, type=str, help='second file')
+	parser.add_argument('--first', required=False, type=str, help='first file')
+	parser.add_argument('--second', required=False, type=str, help='second file')
 	parser.add_argument('--output', required=False, default="", type=str, help='new file')
 	parser.add_argument('--dry-run', required=False, default=False, action='store_true', help='if inserted then nothing will be written to the output file')
 	parser.add_argument('--verbose', required=False, default=False, action='store_true', help='detailed printing')
